@@ -39,7 +39,7 @@ button, select {
 
 /* Custom FontAwesome Icon */
 .fa-icon {
-  font-size: 32px; /* Adjust the size as needed */
+  font-size: 32px; 
   color: blue;
   text-align: center;
 }

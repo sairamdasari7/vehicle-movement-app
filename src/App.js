@@ -4,12 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './App.css';
 
-// Create a custom Leaflet icon with FontAwesome
+
 const carIcon = L.divIcon({
   className: 'custom-icon',
   html: `<div class="fa-icon" style="font-size: 24px; color: blue;"><i class="fas fa-car"></i></div>`,
-  iconSize: [30, 30], // Adjust the size as needed
-  iconAnchor: [15, 30] // Center the icon
+  iconSize: [30, 30], 
+  iconAnchor: [15, 30] 
 });
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
       try {
         const response = await fetch(`http://localhost:5000/api/location/${selectedDate}`);
         const data = await response.json();
-        console.log('Fetched route data:', data); // Add this line
+        console.log('Fetched route data:', data); 
         if (Array.isArray(data) && data.length > 0) {
           setRoute(data);
           setPosition([data[0].latitude, data[0].longitude]);
